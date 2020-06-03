@@ -1,0 +1,2 @@
+ #Allow mediacodec to access audio HAL
+hal_client_domain(mediacodec, hal_audio)

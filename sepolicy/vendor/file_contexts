@@ -1,3 +1,6 @@
 # Camera
 /vendor/lib(64)?/libipebpsstriping\.so		            u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libipebpsstriping170\.so                   u:object_r:same_process_hal_file:s0
+
+# C2 audio
+/vendor/bin/hw/vendor\.qti\.media\.c2audio@1\.0-service          u:object_r:mediacodec_exec:s0
