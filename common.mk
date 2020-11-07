@@ -248,6 +248,10 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     arm64.memtag.process.system_server=off \
     dalvik.vm.dex2oat64.enabled=true \
     ro.launcher.blur.appLaunch=0 \
+
+# Disable RescueParty due to high risk of data loss
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.sys.disable_rescue=true
     
 # Vendor Service Manager
 PRODUCT_PACKAGES += \
