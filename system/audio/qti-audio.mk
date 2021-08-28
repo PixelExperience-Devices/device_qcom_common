@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Inherit from QSSI audio makefile.
-include $(TOPDIR)vendor/qcom/opensource/commonsys/audio/configs/qssi/qssi.mk
+include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/qssi/qssi.mk
 
 ifeq ($(call is-board-platform-in-list,sm6150),true)
 -include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/msmsteppe/msmsteppe.mk
