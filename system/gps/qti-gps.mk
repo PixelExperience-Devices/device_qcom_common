@@ -15,12 +15,6 @@
 PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/system/gps
 
-# Flags
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
-
-# Inherit the GPS HAL.
-$(call inherit-product-if-exists, hardware/qcom/gps/gps_vendor_product.mk)
-
 # Overlays
 PRODUCT_PACKAGES += \
     QCOMGPSFrameworksOverlay
