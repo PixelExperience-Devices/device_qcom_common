@@ -138,17 +138,25 @@ include $(QCOM_COMMON_PATH)/utils.mk
 
 ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 5.4
+TARGET_HALS_VARIANT ?= sm8350
 else ifeq ($(call is-board-platform-in-list,$(4_19_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 4.19
+TARGET_HALS_VARIANT ?= sm8250
 else ifeq ($(call is-board-platform-in-list,$(4_14_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 4.14
+TARGET_HALS_VARIANT ?= sm8150
 else ifeq ($(call is-board-platform-in-list,$(4_9_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 4.9
+TARGET_HALS_VARIANT ?= sdm845
 else ifeq ($(call is-board-platform-in-list,$(4_4_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 4.4
+TARGET_HALS_VARIANT ?= msm8998
 else ifeq ($(call is-board-platform-in-list,$(3_18_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 3.18
+TARGET_HALS_VARIANT ?= msm8996
 endif
+
+TARGET_HALS_PATH ?= hardware/qcom-caf/$(TARGET_HALS_VARIANT)
 
 ifeq ($(call is-board-platform-in-list,$(QCOM_BOARD_PLATFORMS)),true)
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
