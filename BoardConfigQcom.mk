@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+BOARD_USES_QCOM_HARDWARE := true
+
 # AV
 BOARD_USES_ADRENO := true
 TARGET_USES_AOSP_FOR_AUDIO ?= false
