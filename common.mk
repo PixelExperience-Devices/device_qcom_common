@@ -301,6 +301,10 @@ PRODUCT_PACKAGES += \
     fsck.exfat \
     mkfs.exfat
 
+# Sensors
+PRODUCT_PACKAGES += \
+    android.frameworks.sensorservice@1.0.vendor
+
 # SoC
 PRODUCT_VENDOR_PROPERTIES += \
     ro.soc.manufacturer=QTI
