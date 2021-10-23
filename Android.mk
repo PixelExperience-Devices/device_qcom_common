@@ -14,6 +14,8 @@
 
 LOCAL_PATH := $(call my-dir)
 
+ifeq ($(QCOM_COMMON_PATH),device/qcom/common)
+
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
@@ -51,4 +53,6 @@ include $(BUILD_SHARED_LIBRARY)
 # Common
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
 -include vendor/qcom/opensource/core-utils/build/AndroidBoardCommon.mk
+endif
+
 endif
