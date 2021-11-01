@@ -32,6 +32,7 @@ TARGET_MOUNT_POINTS_SYMLINKS ?= false
 
 # SEPolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(QCOM_COMMON_PATH)/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(QCOM_COMMON_PATH)/sepolicy/private
 
 # SEPolicy
 ifneq ($(call is-board-platform-in-list, msm8937 msm8953 msm8996 msm8998 sdm660),true)
