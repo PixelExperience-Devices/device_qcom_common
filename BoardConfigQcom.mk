@@ -41,7 +41,7 @@ TARGET_MOUNT_POINTS_SYMLINKS ?= false
 ifneq ($(call is-board-platform-in-list, msm8937 msm8953 msm8996 msm8998 qcs605 sdm660),true)
 ifneq ($(TARGET_EXCLUDE_QCOM_SEPOLICY),true)
 ifneq ($(BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE),)
-include device/qcom/sepolicy_vndr/SEPolicy.mk
+include device/qcom-LA.UM.10.3.r1-xxxxx-sdm845.0/sepolicy_vndr/SEPolicy.mk
 else
 include device/qcom/sepolicy/SEPolicy.mk
 endif
