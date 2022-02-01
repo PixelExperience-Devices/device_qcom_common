@@ -94,6 +94,12 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.vendor.use_data_netmgrd=true \
     telephony.lteOnCdmaDevice=1
 
+# Force voLTE/voWIFI/viLTE
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1
+
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.ims.disableADBLogs=1 \
