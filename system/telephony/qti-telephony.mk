@@ -102,8 +102,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.dbg.wfc_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1
 
-ifneq ($(TARGET_BUILD_VARIANT),eng)
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
+ifeq ($(TARGET_BUILD_VARIANT),user)
+PRODUCT_SYSTEM_PROPERTIES += \
     persist.vendor.ims.disableADBLogs=1 \
     persist.vendor.ims.disableDebugLogs=1 \
     persist.vendor.ims.disableIMSLogs=1 \
