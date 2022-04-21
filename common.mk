@@ -139,9 +139,6 @@ include $(QCOM_COMMON_PATH)/utils.mk
 ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 5.4
 TARGET_HALS_VARIANT ?= sm8350
-else ifeq ($(call is-board-platform-in-list,$(4_19_FAMILY)),true)
-TARGET_KERNEL_VERSION ?= 4.19
-TARGET_HALS_VARIANT ?= sm8250
 else ifeq ($(call is-board-platform-in-list,$(4_9_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 4.9
 TARGET_HALS_VARIANT ?= sdm845
@@ -151,9 +148,15 @@ TARGET_HALS_VARIANT ?= msm8998
 else ifeq ($(call is-board-platform-in-list,$(3_18_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 3.18
 TARGET_HALS_VARIANT ?= msm8996
-else ifeq ($(TARGET_DEVICE),$(filter $(TARGET_DEVICE),surya))
+endif
+
+# Override Hals
+ifeq ($(DEVICE),surya)
 TARGET_KERNEL_VERSION ?= 4.14
 TARGET_HALS_VARIANT ?= sm8150-common
+else ifeq ($(DEVICE),spes)
+TARGET_KERNEL_VERSION ?= 4.19
+TARGET_HALS_VARIANT ?= sm8250-common
 endif
 
 TARGET_HALS_PATH ?= hardware/qcom-caf/$(TARGET_HALS_VARIANT)
