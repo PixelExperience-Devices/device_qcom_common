@@ -176,11 +176,6 @@ endif
 # Components
 include $(QCOM_COMMON_PATH)/components.mk
 
-# Permissions
-PRODUCT_COPY_FILES += \
-    $(QCOM_COMMON_PATH)/system/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
-    $(QCOM_COMMON_PATH)/system/permissions/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
-
 # Power
 ifneq ($(TARGET_PROVIDES_POWERHAL),true)
 $(call inherit-product-if-exists, vendor/qcom/opensource/power/power-vendor-product.mk)
