@@ -15,6 +15,16 @@
 PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/system/gps
 
+# Flags
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
+
+# Inherit the GPS HAL.
+ifeq ($(DEVICE),surya)
+$(call inherit-product-if-exists, hardware/qcom-caf/sm8150-common/gps/gps_vendor_product.mk)
+else ifeq ($(DEVICE),spes)
+$(call inherit-product-if-exists, hardware/qcom-caf/sm8250-common/gps/gps_vendor_product.mk)
+endif
+
 # Overlays
 PRODUCT_PACKAGES += \
     QCOMGPSFrameworksOverlay
