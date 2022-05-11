@@ -228,6 +228,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
     
+# Compile SystemUI on device with `speed`.
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.systemuicompilerfilter=speed
+    
 # QTI framework detect
 PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti \
