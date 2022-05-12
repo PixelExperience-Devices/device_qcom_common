@@ -22,5 +22,9 @@ endif
 PRODUCT_PACKAGES += \
     android.hardware.graphics.common-V1-ndk_platform
 
+# Properties
+PRODUCT_SYSTEM_PROPERTIES += \
+    debug.hwui.skia_atrace_enabled=false
+    
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/system/display/display-vendor.mk)
