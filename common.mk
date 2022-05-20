@@ -224,6 +224,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-rtti
 
+# Pre-optimization
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI
+    
 # QTI framework detect
 PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti \
