@@ -15,6 +15,9 @@
 PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/vendor/perf
 
+# SEPolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(QCOM_COMMON_PATH)/vendor/perf/sepolicy
+
 # Configs
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/perf/configs/common,$(TARGET_COPY_OUT_VENDOR)/etc) \
