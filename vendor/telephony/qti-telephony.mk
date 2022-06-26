@@ -32,7 +32,7 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2.vendor \
     android.system.net.netd@1.1.vendor
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     persist.radio.multisim.config=dsds \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.custom_ecc=1 \
