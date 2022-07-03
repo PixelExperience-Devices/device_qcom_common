@@ -22,9 +22,6 @@ value:2907
 [AID_VENDOR_FASTRPC]
 value:2908
 
-[AID_VENDOR_QTR]
-value:2909
-
 [vendor/bin/wcnss_filter]
 mode: 0755
 user: AID_BLUETOOTH
@@ -227,4 +224,10 @@ caps: 0
 mode: 0771
 user: AID_MEDIA
 group: AID_MEDIA
+caps: 0
+
+[system/product/vendor_overlay/*/bin/*]
+mode: 0755
+user: AID_ROOT
+group: AID_SHELL
 caps: 0
