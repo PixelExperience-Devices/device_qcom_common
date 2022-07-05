@@ -151,10 +151,10 @@ TARGET_HALS_VARIANT ?= msm8996
 endif
 
 # Override Hals
-ifeq ($(DEVICE),surya)
+ifeq ($(TARGET_USE_SM8150_HALS),true)
 TARGET_KERNEL_VERSION ?= 4.14
 TARGET_HALS_VARIANT ?= sm8150-common
-else ifeq ($(DEVICE),spes)
+else ifeq ($(TARGET_USE_SM8250_HALS),true)
 TARGET_KERNEL_VERSION ?= 4.19
 TARGET_HALS_VARIANT ?= sm8250-common
 endif

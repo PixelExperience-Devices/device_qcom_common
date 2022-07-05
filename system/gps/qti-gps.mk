@@ -19,9 +19,9 @@ PRODUCT_SOONG_NAMESPACES += \
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 
 # Inherit the GPS HAL.
-ifeq ($(DEVICE),surya)
+ifeq ($(TARGET_USE_SM8150_HALS),true)
 $(call inherit-product-if-exists, hardware/qcom-caf/sm8150-common/gps/gps_vendor_product.mk)
-else ifeq ($(DEVICE),spes)
+else ifeq ($(TARGET_USE_SM8250_HALS),true)
 $(call inherit-product-if-exists, hardware/qcom-caf/sm8250-common/gps/gps_vendor_product.mk)
 endif
 
