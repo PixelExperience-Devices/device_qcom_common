@@ -177,6 +177,7 @@ endif
 include $(QCOM_COMMON_PATH)/components.mk
 
 # Power
+TARGET_PROVIDES_POWERHAL := true
 ifneq ($(TARGET_PROVIDES_POWERHAL),true)
 $(call inherit-product-if-exists, vendor/qcom/opensource/power/power-vendor-product.mk)
 endif
