@@ -1,4 +1,4 @@
-# Copyright (C) 2021 Paranoid Android
+# Copyright (C) 2022 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,28 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Include display HAL makefiles.
-include $(TARGET_HALS_PATH)/display/config/display-board.mk
-include $(TARGET_HALS_PATH)/display/config/display-product.mk
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
 include vendor/qcom/opensource/commonsys-intf/display/config/display-interfaces-product.mk
 include vendor/qcom/opensource/commonsys-intf/display/config/display-product-system.mk
 include vendor/qcom/opensource/commonsys/display/config/display-product-commonsys.mk
 endif
 
-# Permissions
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
-
 # Packages
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.common-V1-ndk_platform \
-    android.hardware.graphics.common-V1-ndk_platform.vendor \
-    android.hardware.lights-service.qti \
-    libqdutils \
-    libqservice \
-    libtinyxml \
-    lights.qcom
+    android.hardware.graphics.common-V1-ndk_platform
 
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/system/display/display-vendor.mk)
