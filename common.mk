@@ -176,6 +176,9 @@ endif
 # Components
 include $(QCOM_COMMON_PATH)/components.mk
 
+# Filesystem
+TARGET_FS_CONFIG_GEN += $(QCOM_COMMON_PATH)/config.fs
+
 # Power
 TARGET_PROVIDES_POWERHAL := true
 ifneq ($(TARGET_PROVIDES_POWERHAL),true)
