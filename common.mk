@@ -228,4 +228,8 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti_system \
     libvndfwk_detect_jni.qti.vendor \
 
-endif
+# Vendor Service Manager
+PRODUCT_PACKAGES += \
+    vndservicemanager
+
+endif # QCOM_BOARD_PLATFORMS
