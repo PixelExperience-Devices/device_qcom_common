@@ -13,8 +13,8 @@
 # limitations under the License.
 
 # Inherit from QSSI audio makefiles.
-include $(TOPDIR)$(TARGET_HALS_PATH)/audio/configs/qssi/qssi.mk
-include $(TOPDIR)$(TARGET_HALS_PATH)/audio/configs/qssi/audio_system_product.mk
+include $(TOPDIR)vendor/qcom/opensource/audio/configs/qssi/qssi.mk
+include $(TOPDIR)vendor/qcom/opensource/audio/configs/qssi/audio_system_product.mk
 
 # Audio Packages
 PRODUCT_PACKAGES += \
