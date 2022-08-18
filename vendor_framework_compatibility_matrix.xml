@@ -167,7 +167,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </hal>
    <hal format="hidl" optional="true">
        <name>android.hardware.radio</name>
-       <version>1.0-5</version>
+       <version>1.0-6</version>
        <interface>
           <name>IRadio</name>
           <instance>slot1</instance>
@@ -398,7 +398,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.qti.hardware.radio.ims</name>
-        <version>1-6</version>
+        <version>1-7</version>
         <interface>
             <name>IImsRadio</name>
             <instance>imsradio0</instance>
@@ -730,7 +730,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </hal>
    <hal format="hidl" optional="true">
        <name>android.hardware.radio.config</name>
-       <version>1.0-1</version>
+       <version>1.0-3</version>
        <interface>
            <name>IRadioConfig</name>
            <instance>default</instance>
@@ -773,6 +773,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
    <hal format="hidl" optional="true">
        <name>android.hardware.media.c2</name>
        <version>1.0</version>
+       <version>1.2</version>
        <interface>
            <name>IComponentStore</name>
            <instance>default</instance>
@@ -958,7 +959,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl" optional="true">
         <name>vendor.qti.ims.factory</name>
         <version>1.0-1</version>
-        <version>2.0-1</version>
+        <version>2.0-2</version>
         <interface>
             <name>IImsFactory</name>
             <instance>default</instance>
@@ -1137,6 +1138,15 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <version>1.0</version>
         <interface>
             <name>IDvrDisplay</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.shadowcreator.hardware.nordic</name>
+        <impl level="generic"></impl>
+        <version>1.0</version>
+        <interface>
+            <name>INordic</name>
             <instance>default</instance>
         </interface>
     </hal>
