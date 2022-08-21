@@ -15,7 +15,6 @@
 # Include QTI Bluetooth makefiles.
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
 ifneq ($(TARGET_USE_QTI_BT_STACK),false)
-include vendor/qcom/opensource/commonsys-intf/bluetooth/bt-commonsys-intf-board.mk
 $(call inherit-product, vendor/qcom/opensource/commonsys-intf/bluetooth/bt-system-opensource-product.mk)
 endif
 endif
