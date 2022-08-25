@@ -1,46 +1,5 @@
-// This introduces the module type lights_cc_defaults
-// If target.mk file contained:
-//
-// SOONG_CONFIG_NAMESPACES += lights
-// SOONG_CONFIG_lights += lighttargets
-// SOONG_CONFIG_lights_lighttargets := lightaidltarget
-//
-// Then ligets lib  would build with shared_libs
-
-soong_config_module_type {
-    name: "lights_cc_defaults",
-    module_type: "cc_defaults",
-    config_namespace: "lights",
-    variables: ["lighttargets"],
-    properties: ["shared_libs"],
-}
-
-soong_config_string_variable {
-    name: "lighttargets",
-    values: ["lightaidltarget", "lightaidlV1target"],
-}
-
-lights_cc_defaults {
-    name: "lights_defaults",
-    soong_config_variables: {
-        lighttargets: {
-            lightaidltarget: {
-                 shared_libs: [
-                       "android.hardware.light-ndk_platform",
-                  ],
-            },
-            lightaidlV1target: {
-                 shared_libs: [
-                       "android.hardware.light-V1-ndk_platform",
-                  ],
-            },
-        },
-    },
-}
-
 cc_binary {
     name: "android.hardware.lights-service.qti",
-    defaults: ["lights_defaults"],
     relative_install_path: "hw",
     init_rc: ["android.hardware.lights-qti.rc"],
     vintf_fragments: ["android.hardware.lights-qti.xml"],
@@ -50,6 +9,7 @@ cc_binary {
         "liblog",
         "libhardware",
         "libbinder_ndk",
+        "android.hardware.light-ndk_platform",
     ],
     srcs: [
         "Lights.cpp",
