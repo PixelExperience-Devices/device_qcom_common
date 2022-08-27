@@ -1,0 +1,2 @@
+# Allow init.aospa.perf.rc to read CPUSets
+allow vendor_init cgroup:file r_file_perms;
