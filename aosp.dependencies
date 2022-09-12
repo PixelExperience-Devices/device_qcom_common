@@ -3,6 +3,6 @@
        "remote"      : "pixel-devices-blobs",
        "repository"  : "vendor_qcom_common",
        "target_path" : "vendor/qcom/common",
-       "branch"      : "twelve"
+       "branch"      : "thirteen"
     }
 ]
