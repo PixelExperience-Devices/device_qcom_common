@@ -24,5 +24,9 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.bluetooth.library_name=libbluetooth_qti.so
 endif
 
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.btconfigstore@1.0 \
+    vendor.qti.hardware.btconfigstore@2.0
+
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/system/bt/bt-vendor.mk)
