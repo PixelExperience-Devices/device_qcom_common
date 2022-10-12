@@ -428,4 +428,7 @@
         <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
     </string-array>
 
+    <!-- Whether or not to enable the lock screen entry point for the QR code scanner. -->
+    <bool name="config_enableQrCodeScannerOnLockScreen">true</bool>
+    
 </resources>
