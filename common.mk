@@ -170,10 +170,14 @@ endif
 TARGET_HALS_PATH ?= hardware/qcom-caf/$(TARGET_HALS_VARIANT)
 
 ifeq ($(call is-board-platform-in-list,$(QCOM_BOARD_PLATFORMS)),true)
+
+# Compatibility matrix
+DEVICE_MATRIX_FILE += \
+    $(QCOM_COMMON_PATH)/compatibility_matrix.xml
+
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS ?= true
 
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
-# Compatibility matrix
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     vendor/qcom/opensource/core-utils/vendor_framework_compatibility_matrix.xml
 
