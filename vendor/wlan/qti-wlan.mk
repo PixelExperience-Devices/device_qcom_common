@@ -70,21 +70,5 @@ else
 -include device/qcom/wlan/$(TARGET_BOARD_PLATFORM)/wlan.mk
 endif
 
-ifeq ($(TARGET_USE_SM8150_HALS),true)
-ifeq ($(TARGET_USE_SM8250_HALS),true)
-QC_WIFI_HIDL_FEATURE_DUAL_AP := true
-WIFI_HIDL_FEATURE_AWARE := true
-WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.aware.xml \
-    frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
-    frameworks/native/data/etc/android.hardware.wifi.rtt.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.rtt.xml
-    
-PRODUCT_VENDOR_PROPERTIES += \
-    wifi.aware.interface=wifi-aware0
-endif
-endif
-
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/wlan/wlan-vendor.mk)
