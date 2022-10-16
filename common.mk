@@ -243,6 +243,12 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti_system \
     libvndfwk_detect_jni.qti.vendor \
 
+# QSSI properties
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    arm64.memtag.process.system_server=off \
+    dalvik.vm.dex2oat64.enabled=true \
+    ro.launcher.blur.appLaunch=0 \
+    
 # Vendor Service Manager
 PRODUCT_PACKAGES += \
     vndservicemanager
