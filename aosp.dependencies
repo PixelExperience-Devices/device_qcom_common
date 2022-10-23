@@ -1,5 +1,17 @@
 [
     {
+       "remote"      : "pixel-devices",
+       "repository"  : "device_qcom_qssi",
+       "target_path" : "device/qcom/qssi",
+       "branch"      : "thirteen"
+    },
+    {
+       "remote"      : "pixel-devices",
+       "repository"  : "device_qcom_vendor-common",
+       "target_path" : "device/qcom/vendor-common",
+       "branch"      : "thirteen"
+    },
+    {
        "remote"      : "pixel-devices-blobs",
        "repository"  : "vendor_qcom_common",
        "target_path" : "vendor/qcom/common",
