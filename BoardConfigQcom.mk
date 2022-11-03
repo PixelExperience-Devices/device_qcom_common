@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+QCOM_COMMON_PATH := device/qcom/common
 BOARD_USES_QCOM_HARDWARE := true
 
 # AV
@@ -28,6 +29,9 @@ endif
 # Default mount point symlinks to false
 # since they are not used on 8998 and up
 TARGET_MOUNT_POINTS_SYMLINKS ?= false
+
+# SEPolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(QCOM_COMMON_PATH)/sepolicy/vendor
 
 # SEPolicy
 ifneq ($(call is-board-platform-in-list, msm8937 msm8953 msm8996 msm8998 sdm660),true)
