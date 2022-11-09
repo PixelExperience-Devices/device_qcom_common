@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# SEPolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(QCOM_COMMON_PATH)/vendor/nq-nfc/sepolicy
+
 # Inherit from NQ NFC.
 $(call inherit-product, vendor/nxp/opensource/commonsys/packages/apps/Nfc/nfc_system_product.mk)
 $(call inherit-product, vendor/nxp/opensource/sn100x/halimpl/nfc_vendor_product.mk)
