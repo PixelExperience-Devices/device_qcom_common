@@ -244,9 +244,9 @@ PRODUCT_PACKAGES += \
     libhidltransport.vendor \
     libhwbinder.vendor
 
-# Neural Network
+# Protobuf - Workaround for prebuilt Qualcomm HAL
 PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full-rtti
+    libprotobuf-cpp-full-3.9.1-vendorcompat
 
 # Pre-optimization
 PRODUCT_DEXPREOPT_SPEED_APPS += \
