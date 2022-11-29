@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+TARGET_MEDIA_COMPONENT_VARIANT := media
+
 # Inherit configuration from the HAL.
 $(call inherit-product-if-exists, $(TARGET_HALS_PATH)/media/product.mk)
 
