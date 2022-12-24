@@ -8,9 +8,6 @@ TARGET_USES_NQ_NFC ?= true
 
 ifeq ($(TARGET_USES_NQ_NFC), true)
 
-# SEPolicy
-BOARD_VENDOR_SEPOLICY_DIRS += $(QCOM_COMMON_PATH)/vendor/nq-nfc/sepolicy
-
 # Inherit from NQ NFC.
 $(call inherit-product, vendor/nxp/opensource/commonsys/packages/apps/Nfc/nfc_system_product.mk)
 

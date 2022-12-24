@@ -15,9 +15,6 @@
 PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/vendor/init
 
-# SEPolicy
-BOARD_VENDOR_SEPOLICY_DIRS += $(QCOM_COMMON_PATH)/vendor/init/sepolicy
-
 # Add legacy services and permissions for pre-5.10 targets
 ifeq (,$(filter 5.10, $(TARGET_KERNEL_VERSION)))
 PRODUCT_COPY_FILES += \
