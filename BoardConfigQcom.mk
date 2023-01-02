@@ -38,9 +38,13 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(QCOM_COMMON_PATH)/sepolicy/private
 ifneq ($(call is-board-platform-in-list, msm8937 msm8953 msm8996 msm8998 sdm660),true)
 ifneq ($(TARGET_EXCLUDE_QCOM_SEPOLICY),true)
 ifneq ($(BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE),)
+ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 else
+include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
+else
 include device/qcom/sepolicy/SEPolicy.mk
+endif
 endif
 endif # Exclude QCOM SEPolicy
 else
