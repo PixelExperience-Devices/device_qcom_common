@@ -1,1 +1,3 @@
 r_dir_file(vendor_hal_perf_default, system_server)
+allow vendor_hal_perf_default system_server:dir { search };
+allow vendor_hal_perf_default system_server:file { open read getattr};
