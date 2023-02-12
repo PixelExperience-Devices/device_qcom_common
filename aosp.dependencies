@@ -12,6 +12,12 @@
        "branch"      : "thirteen"
     },
     {
+       "remote"      : "pixel-devices",
+       "repository"  : "device_qcom_wlan",
+       "target_path" : "device/qcom/wlan",
+       "branch"      : "thirteen"
+    },
+    {
        "remote"      : "pixel-devices-blobs",
        "repository"  : "vendor_qcom_common",
        "target_path" : "vendor/qcom/common",
