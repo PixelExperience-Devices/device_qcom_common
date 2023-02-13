@@ -37,6 +37,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.fm@1.0.vendor
 
 BOARD_HAVE_QCOM_FM ?= true
+USE_DEVICE_SPECIFIC_FM ?= true
 
 # Permissions
 PRODUCT_COPY_FILES += \
