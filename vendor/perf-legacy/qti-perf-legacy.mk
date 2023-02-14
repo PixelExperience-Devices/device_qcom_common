@@ -44,6 +44,9 @@ PRODUCT_PACKAGES += \
     libtflite \
     vendor.qti.hardware.servicetracker@1.2.vendor
 
+PRODUCT_PACKAGES += \
+    BoostFrameworkOverlay
+    
 # Only copy task_profiles.json for 5.4 targets.
 ifeq ($(TARGET_KERNEL_VERSION),5.4)
 PRODUCT_COPY_FILES += \
