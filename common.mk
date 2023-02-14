@@ -216,11 +216,15 @@ PRODUCT_PACKAGES += \
 # Pre-optimization
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUIGoogle
-    
+
+# Charger
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.charger.enable_suspend=1
+
 # Compile SystemUI on device with `speed`.
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.systemuicompilerfilter=speed
-    
+
 # QTI framework detect
 PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti \
@@ -241,7 +245,7 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 # Disable RescueParty due to high risk of data loss
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.disable_rescue=true
-    
+
 # Vendor Service Manager
 PRODUCT_PACKAGES += \
     vndservicemanager
@@ -261,9 +265,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fsck.exfat \
     mkfs.exfat
-    
+
 # SoC
 PRODUCT_VENDOR_PROPERTIES += \
     ro.soc.manufacturer=QTI
-    
+
 endif # QCOM_BOARD_PLATFORMS
