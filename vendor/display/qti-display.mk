@@ -27,7 +27,7 @@ PRODUCT_PACKAGES += \
 else # >= 5.10
 
 # Include QTI AIDL Lights HAL for 5.10
--include vendor/qcom/opensource/lights/lights-vendor-product.mk
+include vendor/qcom/opensource/lights/lights-vendor-product.mk
 
 endif # >= 5.10
 

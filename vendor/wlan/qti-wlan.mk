@@ -67,13 +67,13 @@ endif
 
 # Include QCOM WLAN makefiles.
 ifeq ($(call is-board-platform-in-list,sdm845),true)
--include device/qcom/wlan/skunk/wlan.mk
+include device/qcom/wlan/skunk/wlan.mk
 else ifeq ($(call is-board-platform-in-list,msm8998 sdm660),true)
--include device/qcom/wlan/sdm660_64/wlan.mk
+include device/qcom/wlan/sdm660_64/wlan.mk
 else ifeq ($(call is-board-platform-in-list,sm6150),true)
--include device/qcom/wlan/talos/wlan.mk
+include device/qcom/wlan/talos/wlan.mk
 else
--include device/qcom/wlan/$(TARGET_BOARD_PLATFORM)/wlan.mk
+include device/qcom/wlan/$(TARGET_BOARD_PLATFORM)/wlan.mk
 endif
 
 # Get non-open-source specific aspects.

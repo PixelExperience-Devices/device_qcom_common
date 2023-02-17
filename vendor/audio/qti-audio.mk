@@ -13,9 +13,9 @@
 # limitations under the License.
 
 ifeq ($(call is-board-platform-in-list,sm6150),true)
--include $(TOPDIR)$(TARGET_HALS_PATH)/audio/configs/msmsteppe/msmsteppe.mk
+include $(TOPDIR)$(TARGET_HALS_PATH)/audio/configs/msmsteppe/msmsteppe.mk
 else
--include $(TOPDIR)$(TARGET_HALS_PATH)/audio/configs/$(TARGET_BOARD_PLATFORM)/$(TARGET_BOARD_PLATFORM).mk
+include $(TOPDIR)$(TARGET_HALS_PATH)/audio/configs/$(TARGET_BOARD_PLATFORM)/$(TARGET_BOARD_PLATFORM).mk
 endif
 
 # Build Qualcomm common audio overlay
