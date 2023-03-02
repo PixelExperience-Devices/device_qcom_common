@@ -250,4 +250,8 @@ PRODUCT_PACKAGES += \
     fsck.exfat \
     mkfs.exfat
     
+# SoC
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.soc.manufacturer=QTI
+    
 endif # QCOM_BOARD_PLATFORMS
