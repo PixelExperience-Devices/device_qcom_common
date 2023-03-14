@@ -39,7 +39,6 @@ endif
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
     android.hardware.thermal@2.0.vendor \
-    init.aospa.perf.rc \
     libavservices_minijail.vendor \
     libpsi.vendor \
     libtflite \
