@@ -1,2 +1,0 @@
- #Allow callbacks into QC2 audio service
-hal_client_domain(hal_audio_default, hal_codec2)

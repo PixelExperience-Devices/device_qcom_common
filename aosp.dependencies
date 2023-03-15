@@ -1,6 +1,12 @@
 [
     {
        "remote"      : "pixel-devices",
+       "repository"  : "device_qcom_common-sepolicy",
+       "target_path" : "device/qcom/common-sepolicy",
+       "branch"      : "thirteen"
+    },
+    {
+       "remote"      : "pixel-devices",
        "repository"  : "device_qcom_qssi",
        "target_path" : "device/qcom/qssi",
        "branch"      : "thirteen"
