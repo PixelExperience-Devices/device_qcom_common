@@ -39,6 +39,9 @@ PRODUCT_PACKAGES += \
 BOARD_HAVE_QCOM_FM ?= true
 USE_DEVICE_SPECIFIC_FM ?= true
 
+PRODUCT_SOONG_NAMESPACES += \
+    device/qcom/vendor-common/commonsys/fm
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
