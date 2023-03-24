@@ -3,16 +3,4 @@ system_ext/etc/default-permissions/com.qualcomm.qtil.btdsda.xml
 system_ext/lib/com.qualcomm.qti.ant@1.0.so
 -system_ext/lib/libbtconfigstore.so
 system_ext/lib64/com.qualcomm.qti.ant@1.0.so
-system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
-system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 -system_ext/lib64/libbtconfigstore.so
-
-# Bluetooth (LDAC & LHDC) - from Alioth V13.0.8.0.SKHEUXM
-system_ext/lib/libldacBT_abr.so|9c0ea011362f9cf500fea4736c22237ceb202aa1
-system_ext/lib/libldacBT_enc.so|b4e3e198c00cdde64601a14a6f846ccbaddcee49
-system_ext/lib/liblhdc.so|558ed4d636b52cc6a91c8c6c039c4a8500fc735e
-system_ext/lib/liblhdcBT_enc.so|08cf27d65d8c1d7a6919b90747f0507836eb3dd1
-system_ext/lib64/libldacBT_abr.so|7aa692f5bdab3889da0c484cd1fbfa837986e545
-system_ext/lib64/libldacBT_enc.so|b5ca653519358667f916fc9e11987688cec7aef8
-system_ext/lib64/liblhdc.so|869a28f062b22de3cecfd5ff2309f56fd8fc21c0
-system_ext/lib64/liblhdcBT_enc.so|109af04d6247b1404d16d56edc58270467b53020
