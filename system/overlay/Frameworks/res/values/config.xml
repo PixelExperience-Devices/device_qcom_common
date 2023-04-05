@@ -472,4 +472,7 @@
     <!-- Whether or not to enable the lock screen entry point for the QR code scanner. -->
     <bool name="config_enableQrCodeScannerOnLockScreen">true</bool>
     
+    <!-- Support decoding of GSM 8 bit encoded SMS-->
+    <bool translatable="false" name="config_sms_decode_gsm_8bit_data">true</bool>
+    
 </resources>
