@@ -64,10 +64,10 @@ PRODUCT_COPY_FILES += \
 
 # Files
 ifeq ($(call is-board-platform-in-list,msm8998 msmnile sdm660 sdm710 sdm845 trinket),true)
-PRODUCT_COPY_FILES += vendor/qcom/opensource/audio-hal/primary-hal/configs/$(TARGET_BOARD_PLATFORM)/audio_tuning_mixer_tavil.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt
+PRODUCT_COPY_FILES += $(TARGET_HALS_PATH)/audio/configs/$(TARGET_BOARD_PLATFORM)/audio_tuning_mixer_tavil.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt
 else
 ifeq ($(call is-board-platform-in-list,sm6150),true)
-PRODUCT_COPY_FILES += vendor/qcom/opensource/audio-hal/primary-hal/configs/msmsteppe/audio_tuning_mixer_tavil.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt
+PRODUCT_COPY_FILES += $(TARGET_HALS_PATH)/audio/configs/msmsteppe/audio_tuning_mixer_tavil.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt
 endif
 endif
 
