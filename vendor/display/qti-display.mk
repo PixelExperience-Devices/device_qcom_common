@@ -13,8 +13,8 @@
 # limitations under the License.
 
 # Include display HAL makefiles.
-include $(TARGET_HALS_PATH)/display/config/display-board.mk
-include $(TARGET_HALS_PATH)/display/config/display-product.mk
+$(call inherit-product-if-exists, $(TARGET_HALS_PATH)/display/config/display-board.mk)
+$(call inherit-product-if-exists, $(TARGET_HALS_PATH)/display/config/display-product.mk)
 
 # Enable Legacy Lights HAL for <5.10 targets
 ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
