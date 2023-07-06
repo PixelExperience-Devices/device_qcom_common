@@ -22,9 +22,9 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 
 # Inherit the GPS HAL.
 ifeq ($(TARGET_USE_SM8150_HALS),true)
-$(call inherit-product-if-exists, hardware/qcom-caf/sm8150-common/gps/gps_vendor_product.mk)
+$(call inherit-product-if-exists, $(TARGET_HALS_PATH)/gps/gps_vendor_product.mk)
 else ifeq ($(TARGET_USE_BENGAL_HALS),true)
-$(call inherit-product-if-exists, hardware/qcom-caf/bengal/gps/gps_vendor_product.mk)
+$(call inherit-product-if-exists, $(TARGET_HALS_PATH)/gps/gps_vendor_product.mk)
 endif
 
 # Overlays
