@@ -28,11 +28,9 @@ QCOM_BOARD_PLATFORMS += \
     $(TRINKET) \
     atoll \
     bengal \
-    bengal_515 \
     crow \
     holi \
     kona \
-    kona_515 \
     kalama \
     lahaina \
     lito \
@@ -86,9 +84,7 @@ endif
 
 # Kernel Families
 5_15_FAMILY := \
-    bengal_515 \
     crow \
-    kona_515 \
     kalama \
     monaco
 
