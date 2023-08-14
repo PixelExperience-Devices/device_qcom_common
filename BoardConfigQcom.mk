@@ -37,5 +37,5 @@ include device/qcom/common-sepolicy/sepolicy_vndr/SEPolicy.mk
 else # if (8937 || 8953 || 8998 || 660)
 include device/qcom/common-sepolicy/sepolicy/SEPolicy.mk
 endif # !(8937 || 8953 || 8998 || 660)
-include device/qcom/common-sepolicy/sepolicy_vndr-legacy/SEPolicy.mk
+include device/qcom/common-sepolicy/custom_vndr-legacy/SEPolicy.mk
 endif # Exclude QCOM SEPolicy
