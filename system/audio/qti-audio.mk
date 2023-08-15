@@ -13,8 +13,8 @@
 # limitations under the License.
 
 # Inherit from QSSI audio makefiles.
-include $(TOPDIR)vendor/qcom/opensource/audio/configs/qssi/qssi.mk
-include $(TOPDIR)vendor/qcom/opensource/audio/configs/qssi/audio_system_product.mk
+$(call inherit-product-if-exists, $(TOPDIR)vendor/qcom/opensource/audio/configs/qssi/qssi.mk)
+$(call inherit-product-if-exists, $(TOPDIR)vendor/qcom/opensource/audio/configs/qssi/audio_system_product.mk)
 
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/system/audio/audio-vendor.mk)
