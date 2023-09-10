@@ -34,5 +34,11 @@
        "repository"  : "vendor_qcom_opensource_commonsys-intf_bluetooth",
        "target_path" : "vendor/qcom/opensource/commonsys-intf/bluetooth",
        "branch"      : "thirteen"
+   },
+   {
+       "remote"      : "pixel",
+       "repository"  : "vendor_qcom_opensource_audio",
+       "target_path" : "vendor/qcom/opensource/audio",
+       "branch"      : "thirteen"
    }
 ]
