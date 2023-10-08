@@ -196,7 +196,7 @@ PRODUCT_ODM_PROPERTIES += ro.vendor.qti.va_odm.support=1
 endif
 
 # Opt out of 16K alignment changes
-PRODUCT_MAX_PAGE_SIZE_SUPPORTED := 4096
+PRODUCT_MAX_PAGE_SIZE_SUPPORTED ?= 4096
 
 # Components
 include $(QCOM_COMMON_PATH)/components.mk
