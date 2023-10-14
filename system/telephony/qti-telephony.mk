@@ -44,7 +44,8 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils \
     qti-telephony-utils-prd \
     qti_telephony_utils.xml \
-    qti_telephony_utils_prd.xml
+    qti_telephony_utils_prd.xml \
+    vendor.qti.hardware.systemhelperaidl-V1-ndk
 
 PRODUCT_BOOT_JARS += \
     tcmiface \
