@@ -274,7 +274,7 @@ PRODUCT_PACKAGES += \
 
 # QSSI properties
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    arm64.memtag.process.system_server=off \
+    persist.arm64.memtag.system_server=off \
     dalvik.vm.dex2oat64.enabled=true \
     ro.launcher.blur.appLaunch=0 \
 
