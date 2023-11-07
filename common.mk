@@ -204,6 +204,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.soc.manufacturer=QTI
 
+# Common android HIDL vendor variant
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.4.vendor \
+    android.hardware.gatekeeper@1.0.vendor \
+    android.hardware.keymaster@4.1.vendor \
+    android.hardware.neuralnetworks@1.3.vendor \
+    android.hardware.authsecret@1.0.vendor \
+    vendor.qti.hardware.camera.device@1.0.vendor
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
