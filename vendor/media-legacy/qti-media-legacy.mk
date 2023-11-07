@@ -27,7 +27,7 @@ PRODUCT_ODM_PROPERTIES += \
 endif
 
 # Inherit configuration from the HAL.
-$(call inherit-product-if-exists, hardware/qcom/media/product.mk)
+$(call inherit-product-if-exists, $(TARGET_HALS_PATH)/media/product.mk)
 
 # Manifest
 ifneq ($(TARGET_USES_CUSTOM_C2_MANIFEST), true)

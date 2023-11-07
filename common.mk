@@ -124,22 +124,53 @@ endif
     msm8937 \
     msm8996
 
-ifeq ($(call is-board-platform-in-list,$(5_15_FAMILY)),true)
-TARGET_KERNEL_VERSION ?= 5.15
-else ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
-TARGET_KERNEL_VERSION ?= 5.10
-else ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
-TARGET_KERNEL_VERSION ?= 5.4
-else ifeq ($(call is-board-platform-in-list,$(4_19_FAMILY)),true)
-TARGET_KERNEL_VERSION ?= 4.19
-else ifeq ($(call is-board-platform-in-list,$(4_14_FAMILY)),true)
-TARGET_KERNEL_VERSION ?= 4.14
-else ifeq ($(call is-board-platform-in-list,$(4_9_FAMILY)),true)
-TARGET_KERNEL_VERSION ?= 4.9
-else ifeq ($(call is-board-platform-in-list,$(4_4_FAMILY)),true)
-TARGET_KERNEL_VERSION ?= 4.4
-else ifeq ($(call is-board-platform-in-list,$(3_18_FAMILY)),true)
+# Override Hals
+TARGET_HALS_PATH ?= hardware/qcom-caf/$(TARGET_HALS_VARIANT)
+
+ifeq ($(TARGET_USE_MSM8996_HALS),true) # msm8937 msm8996
 TARGET_KERNEL_VERSION ?= 3.18
+TARGET_HALS_VARIANT ?= msm8996-common
+OVERRIDE_QCOM_HARDWARE_VARIANT := msm8996-common
+else ifeq ($(TARGET_USE_MSMS8998_HALS),true) # MSM8998 SDM660-4.4
+TARGET_KERNEL_VERSION ?= 4.4
+TARGET_HALS_VARIANT ?= msm8998-common
+OVERRIDE_QCOM_HARDWARE_VARIANT := msm8998-common
+else ifeq ($(TARGET_USE_SDM845_HALS),true) # MSM8953 SDM710 SDM845
+TARGET_KERNEL_VERSION ?= 4.9
+TARGET_HALS_VARIANT ?= sdm845-common
+OVERRIDE_QCOM_HARDWARE_VARIANT := sdm845-common
+else ifeq ($(TARGET_USE_SM8150_HALS),true) # atoll msmsteppe msmnille trinket
+TARGET_KERNEL_VERSION ?= 4.14
+TARGET_HALS_VARIANT ?= sm8150-common
+OVERRIDE_QCOM_HARDWARE_VARIANT := sm8150-common
+else ifeq ($(TARGET_USE_SDM660_4_1_9_HALS),true) # SDM660-4.19
+TARGET_KERNEL_VERSION ?= 4.19
+TARGET_HALS_VARIANT ?= sdm660
+OVERRIDE_QCOM_HARDWARE_VARIANT := sdm660
+else ifeq ($(TARGET_USE_SM8250_HALS),true) # lito kona
+TARGET_KERNEL_VERSION ?= 4.19
+TARGET_HALS_VARIANT ?= sm8250-common
+OVERRIDE_QCOM_HARDWARE_VARIANT := sm8250-common
+else ifeq ($(TARGET_USE_BENGAL_HALS),true) # sm6115 sm6225
+TARGET_KERNEL_VERSION ?= 4.19
+TARGET_HALS_VARIANT ?= bengal
+OVERRIDE_QCOM_HARDWARE_VARIANT := bengal
+else ifeq ($(TARGET_USE_SM8350_HALS),true) # lahaina/holi: sm8350/sm6375
+TARGET_KERNEL_VERSION ?= 5.4
+TARGET_HALS_VARIANT ?= sm8350-common
+OVERRIDE_QCOM_HARDWARE_VARIANT := sm8350-common
+else ifeq ($(TARGET_USE_SM8450_HALS),true) # taro parrot
+TARGET_KERNEL_VERSION ?= 5.10
+TARGET_HALS_VARIANT ?= sm8450-common
+OVERRIDE_QCOM_HARDWARE_VARIANT := sm8450-common
+else ifeq ($(TARGET_USE_SM8550_HALS),true) # kalama crow
+TARGET_KERNEL_VERSION ?= 5.15
+TARGET_HALS_VARIANT ?= sm8550-common
+OVERRIDE_QCOM_HARDWARE_VARIANT := sm8550-common
+else ifeq ($(TARGET_USE_SM6225_HALS),true) # bengal-515: SM6225-AD - khaje divar
+TARGET_KERNEL_VERSION ?= 5.15
+TARGET_HALS_VARIANT ?= sm6225
+OVERRIDE_QCOM_HARDWARE_VARIANT := sm6225
 endif
 
 ifeq ($(call is-board-platform-in-list,$(QCOM_BOARD_PLATFORMS)),true)
