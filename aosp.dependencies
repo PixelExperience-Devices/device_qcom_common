@@ -1,0 +1,44 @@
+[
+    {
+       "remote"      : "pixel-devices",
+       "repository"  : "device_qcom_common-sepolicy",
+       "target_path" : "device/qcom/common-sepolicy",
+       "branch"      : "fourteen"
+    },
+    {
+       "remote"      : "pixel-devices",
+       "repository"  : "device_qcom_qssi",
+       "target_path" : "device/qcom/qssi",
+       "branch"      : "fourteen"
+    },
+    {
+       "remote"      : "pixel-devices",
+       "repository"  : "device_qcom_vendor-common",
+       "target_path" : "device/qcom/vendor-common",
+       "branch"      : "fourteen"
+    },
+    {
+       "remote"      : "pixel-devices",
+       "repository"  : "device_qcom_wlan",
+       "target_path" : "device/qcom/wlan",
+       "branch"      : "fourteen"
+    },
+    {
+       "remote"      : "pixel-devices-blobs",
+       "repository"  : "vendor_qcom_common",
+       "target_path" : "vendor/qcom/common",
+       "branch"      : "fourteen"
+    },
+    {
+       "remote"      : "pixel",
+       "repository"  : "vendor_qcom_opensource_commonsys-intf_bluetooth",
+       "target_path" : "vendor/qcom/opensource/commonsys-intf/bluetooth",
+       "branch"      : "fourteen"
+   },
+   {
+       "remote"      : "pixel",
+       "repository"  : "vendor_qcom_opensource_audio",
+       "target_path" : "vendor/qcom/opensource/audio",
+       "branch"      : "fourteen"
+   }
+]
