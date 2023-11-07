@@ -10,7 +10,18 @@ ifeq ($(TARGET_USES_NQ_NFC), true)
 
 # Inherit from NQ NFC.
 $(call inherit-product, vendor/nxp/opensource/commonsys/packages/apps/Nfc/nfc_system_product.mk)
-$(call inherit-product, vendor/nxp/opensource/halimpl/nfc_vendor_product.mk)
+
+ifeq ($(TARGET_USES_SN100X_HAL),true)
+$(call inherit-product, vendor/nxp/opensource/sn100x/halimpl/nfc_vendor_product.mk)
+
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/nxp/opensource/sn100x
+else ifeq ($(TARGET_USES_PN5XX_HAL),true)
+$(call inherit-product, vendor/nxp/opensource/pn5xx/halimpl/nfc_vendor_product.mk)
+
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/nxp/opensource/pn5xx
+endif
 
 # Packages
 PRODUCT_PACKAGES += \
