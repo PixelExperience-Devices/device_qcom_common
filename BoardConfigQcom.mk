@@ -28,6 +28,7 @@ endif
 TARGET_MOUNT_POINTS_SYMLINKS ?= false
 
 # SEPolicy
+include device/custom/sepolicy/qcom/sepolicy.mk
 ifneq ($(TARGET_EXCLUDE_QCOM_SEPOLICY),true)
 ifneq ($(call is-board-platform-in-list, msm8937 msm8953 msm8998 sdm660),true)
 include device/qcom/common-sepolicy/SEPolicy.mk # (sepolicy_vndr)
