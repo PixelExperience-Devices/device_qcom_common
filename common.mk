@@ -303,8 +303,4 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libwpa_client
 
-# Pre-optimization
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUIGoogle
-
 endif # QCOM_BOARD_PLATFORMS
