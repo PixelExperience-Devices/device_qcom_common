@@ -39,7 +39,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.common-V1-ndk_platform.vendor \
     libqdutils \
-    libqservice
+    libqservice \
+    libtinyxml
 
 # Properties for <5.15 targets
 # These are already set on 5.15+.
