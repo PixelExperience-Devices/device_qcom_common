@@ -249,18 +249,42 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # QSSI properties
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    persist.arm64.memtag.system_server=off \
     dalvik.vm.dex2oat64.enabled=true \
+    debug.sf.frame_rate_multiple_threshold=60 \
+    persist.arm64.memtag.system_server=off \
     ro.launcher.blur.appLaunch=0 \
+    ro.sf.use_latest_hwc_vsync_period=0
 
 # Disable RescueParty due to high risk of data loss
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.disable_rescue=true
 
+# StrictMode
+ifneq ($(TARGET_BUILD_VARIANT),eng)
+# Disable extra StrictMode features on all non-engineering builds
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.sys.strictmode.disable=true
+endif
+
+# curl
+PRODUCT_PACKAGES += \
+    curl
+
 # Exfat FS
 PRODUCT_PACKAGES += \
     fsck.exfat \
     mkfs.exfat
+
+# Include fs tools for dedicated recovery and ramdisk partitions.
+PRODUCT_PACKAGES += \
+    e2fsck_ramdisk \
+    resize2fs_ramdisk \
+    tune2fs_ramdisk
+
+PRODUCT_PACKAGES += \
+    e2fsck.recovery \
+    resize2fs.recovery \
+    tune2fs.recovery
 
 # Common android HIDL vendor variant
 PRODUCT_PACKAGES += \
@@ -303,4 +327,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libwpa_client
 
+PRODUCT_VENDOR_MOVE_ENABLED := true
 endif # QCOM_BOARD_PLATFORMS

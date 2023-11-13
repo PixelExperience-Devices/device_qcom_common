@@ -51,6 +51,10 @@ PRODUCT_BOOT_JARS += \
     tcmiface \
     telephony-ext
 
+# Telephony - AOSP
+PRODUCT_PACKAGES += \
+    Stk
+
 # Properties
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     DEVICE_PROVISIONED=1 \
