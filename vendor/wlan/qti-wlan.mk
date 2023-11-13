@@ -13,7 +13,8 @@
 # limitations under the License.
 
 PRODUCT_SOONG_NAMESPACES += \
-    device/qcom/common/vendor/wlan
+    device/qcom/common/vendor/wlan \
+    hardware/qcom-caf/wlan
 
 TARGET_WLAN_COMPONENT_VARIANT := wlan
 
