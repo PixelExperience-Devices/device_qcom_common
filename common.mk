@@ -242,10 +242,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.soc.manufacturer=QTI
 
-# Charger
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.charger.enable_suspend=1
-
 # Compile SystemUI on device with `speed`.
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.systemuicompilerfilter=speed
